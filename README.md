@@ -3,7 +3,7 @@
 #Teste Triider
 Esse repositório tem como objetivo guiar e facilitar a execução do projeto.
 
-Link de apresentação do projeto: https://youtu.be/mW-rGnXYknY
+Vídeo apresentação do projeto: https://youtu.be/mW-rGnXYknY
 
 #Requisitos:
 
@@ -15,12 +15,12 @@ Rodar o arquivo so_piada_boa_felipe.sql para criar o Schema do banco com todas a
 ----------------
 arquivo `.env`:
 
-`PORT=3001
+`PORT=3001`
 
-HOST=localhost
-USER=root
-PASSWORD=root
-DATABASE=so_piada_boa`
+`HOST=localhost`
+`USER=root`
+`PASSWORD=root`
+`DATABASE=so_piada_boa`
 
 ----------------------
 
