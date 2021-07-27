@@ -1,0 +1,207 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API documentation",
+    "description": "This API aims to bring information about the product of Só Piada Boa",
+    "contact": {
+      "email": "DemelloBRL@gmail.com"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3001/v1",
+      "description": "Main API"
+    }
+  ],
+  "paths": {
+    "/jokes": {
+      "post": {
+        "summary": "Register Jokes",
+        "description": "This route will be responsable for register a new joke.",
+        "tags": ["Jokes"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Joke"
+              },
+              "examples": {
+                "jokes": {
+                  "value": {
+                    "name": "João Armless",
+                    "email": "joao.armless@email.com",
+                    "title": "Chuck Norris",
+                    "description": "Chuck Norris can walk on water. With his hands"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/Joke"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "List Jokes",
+        "description": "This route will be responsable for listing the jokes.",
+        "tags": ["Jokes"],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "content": {
+            "application/json": {
+              "items": {
+                "$ref": "#/components/schemas/Joke"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/jokes/autocomplete/{char}": {
+      "get": {
+        "summary": "List Jokes",
+        "description": "This route will be responsible for listing the jokes according to the characters passed in the parameters.",
+        "tags": ["Jokes"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "char",
+            "description": "Any characters",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "content": {
+            "application/json": {
+              "items": {
+                "$ref": "#/components/schemas/Joke"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/jokes/orderby/{order}": {
+      "get": {
+        "summary": "List Jokes",
+        "description": "This route will be responsable for listing the jokes ordering them by 'ASC/DESC'.",
+        "tags": ["Jokes"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "order",
+            "description": "Joke id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "content": {
+            "application/json": {
+              "items": {
+                "$ref": "#/components/schemas/Joke"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/jokes/like/{id}": {
+      "put": {
+        "summary": "Adding likes to the joke",
+        "description": "This route will be responsable for adding +1 like to the joke.",
+        "tags": ["Jokes"],
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Joke id",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          }
+        }
+      }
+    },
+    "/jokes/dislike/{id}": {
+      "put": {
+        "summary": "Adding dislikes to the joke",
+        "description": "This route will be responsable for adding +1 dislike to the joke.",
+        "tags": ["Jokes"],
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Joke id",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Joke": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "likes": {
+            "type": "number"
+          },
+          "dislikes": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  }
+}

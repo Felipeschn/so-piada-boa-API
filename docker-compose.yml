@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3001:3001
+    volumes:
+      - .:/app
+    depends_on:
+      - mysql_server
+
+  mysql_server:
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_DATABASE=so_piada_boa
+      - MYSQL_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=root
