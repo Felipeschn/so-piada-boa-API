@@ -13,14 +13,14 @@ Link de apresentação do projeto: https://youtu.be/mW-rGnXYknY
 Rodar o arquivo so_piada_boa_felipe.sql para criar o Schema do banco com todas as suas tabelas e migrations.
 
 ----------------
-arquivo .env:
+arquivo `.env`:
 
-PORT=3001
+`PORT=3001
 
 HOST=localhost
 USER=root
 PASSWORD=root
-DATABASE=so_piada_boa
+DATABASE=so_piada_boa`
 
 ----------------------
 
@@ -30,6 +30,6 @@ docker-compose up
 
 Para criar as imagens, rodar os packages e tudo mais.
 
-Documentação da API está em : http://localhost:3000/v1/api-docs (Swagger)
+Documentação da API está em : http://localhost:3001/v1/api-docs (Swagger)
 
 Qualquer dúvida estou a disposição.
