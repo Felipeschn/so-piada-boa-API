@@ -21,9 +21,7 @@ module.exports = {
       checkDataBaseConnection();
     } catch (err) {
       console.log(err);
-      if (err) {
-        return res.status(500).send();
-      }
+      return res.status(500).send();
     } finally {
       const { name, email, title, description } = req.body;
 
@@ -34,11 +32,10 @@ module.exports = {
       const response = await Joke.sequelize.query(
         `INSERT INTO Jokes (name, email, title,description) VALUES ("${name}","${email}","${title}","${description}");`,
         {
-          type: Joke.sequelize.QueryTypes.SELECT,
+          type: Joke.sequelize.QueryTypes.INSERT,
         }
       );
-
-      return res.status(201).json(response);
+      return res.status(201).send();
     }
   },
 
@@ -61,9 +58,7 @@ module.exports = {
       checkDataBaseConnection();
     } catch (err) {
       console.log(err);
-      if (err) {
-        return res.status(500).send();
-      }
+      return res.status(500).send();
     } finally {
       const { char } = req.params;
       const response = await Joke.sequelize.query(
@@ -83,9 +78,8 @@ module.exports = {
       checkDataBaseConnection();
     } catch (err) {
       console.log(err);
-      if (err) {
-        return res.status(500).send();
-      }
+
+      return res.status(500).send();
     } finally {
       const response = await Joke.sequelize.query(
         `SELECT * FROM Jokes ORDER BY dt_created ${order};`,
@@ -107,9 +101,7 @@ module.exports = {
       checkDataBaseConnection();
     } catch (err) {
       console.log(err);
-      if (err) {
-        return res.status(500).send();
-      }
+      return res.status(500).send();
     } finally {
       const jokes = await getJokes();
 
@@ -139,9 +131,8 @@ module.exports = {
       checkDataBaseConnection();
     } catch (err) {
       console.log(err);
-      if (err) {
-        return res.status(500).send();
-      }
+
+      return res.status(500).send();
     } finally {
       const jokes = await getJokes();
 
