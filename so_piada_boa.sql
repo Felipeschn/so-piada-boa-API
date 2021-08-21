@@ -34,7 +34,7 @@ CREATE TABLE `Jokes` (
   `likes` int(11) NOT NULL DEFAULT '0',
   `dislikes` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,13 +43,11 @@ CREATE TABLE `Jokes` (
 
 LOCK TABLES `Jokes` WRITE;
 /*!40000 ALTER TABLE `Jokes` DISABLE KEYS */;
-INSERT INTO `Jokes` VALUES (1,'string','string','string','string','2021-07-27 14:00:23',2,2),(2,'Felipe de Mello','felipe@triider.com','Piadoca','PPiada boa e bem feitaPiada boa e bem feitaPiada boa e bem feita','2021-07-27 14:19:01',2,3),(3,'Felipe de Mello','felipe@triider.com','TITULO QUALQUER','PIADA QUALUQER, PIADA QUALUQER, PIADA QUALUQER, PIADA QUALUQER, PIADA QUALUQER, PIADA QUALUQER, ','2021-07-27 14:31:18',3,3),(4,'João Armless','joao.armless@email.com','Chuck Norris','Chuck Norris can walk on water. With his hands','2021-07-27 18:29:29',6,5),(5,'Tridder teste','triider@triider.com','Titulo da piada','TESTE TESTETESTE TESTETESTE TESTETESTE TESTETESTE TESTETESTE TESTETESTE TESTETESTE TESTETESTE TESTETESTE TESTETESTE TESTETESTE TESTETESTE TESTE','2021-07-27 18:37:48',1,1),(6,'Tridder teste','triider@triider.com','Piadoca','Piadoca bem bolada, Piadoca , Piadoca bem bolada, Piadoca bem bolada, Piadoca bem bolada, Piadoca bem bolada.','2021-07-27 18:45:41',2,1),(7,'FELIPE','joaoDISJADSA@DHSAUDm.com','TITULO PIADA','QWERWQERQWERQWERWQERWEQRWEQREQW','2021-07-27 18:47:43',0,0);
+INSERT INTO `Jokes` VALUES (1,'Felipe de Mello Schneider','demellobrl@gmail.com','ELE NAO É O PAI','De a acordo com o Little rato, você NÃO é o pai!','2021-08-18 14:17:21',10,4),(2,'Felipe  Schneider','demellobrl@gmail.com','AAAAAAAA','qewr','2021-08-18 17:20:17',2,6),(3,'Josezinho','josezinho@email.com','Piada do jose','jose joke\'s, jose joke\'s, jose joke\'s, jose joke\'s,jose joke\'s','2021-08-20 01:03:29',1,1),(4,'aaaaaaaaa','bbbbbbb@ema.com','asdsadad','12345678910','2021-08-20 01:04:04',1,1),(5,'Josezinho','josezinho@email.com','ELE NAO É O PAI','ELE NAO É O PAI','2021-08-20 03:00:49',0,0),(6,'aaaaaaasd','demellobrl@gmail.com','ELE NAO É O PAI','dsadsadas','2021-08-20 03:04:38',2,1);
 /*!40000 ALTER TABLE `Jokes` ENABLE KEYS */;
 UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
---
--- Table structure for table `SequelizeMeta`
---
 
 DROP TABLE IF EXISTS `SequelizeMeta`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -67,18 +65,9 @@ CREATE TABLE `SequelizeMeta` (
 
 LOCK TABLES `SequelizeMeta` WRITE;
 /*!40000 ALTER TABLE `SequelizeMeta` DISABLE KEYS */;
-INSERT INTO `SequelizeMeta` VALUES ('20210727135758-create-jokes.js');
+INSERT INTO `SequelizeMeta` VALUES ('20210818141536-create-joke.js');
 /*!40000 ALTER TABLE `SequelizeMeta` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping events for database 'so_piada_boa'
---
-
---
--- Dumping routines for database 'so_piada_boa'
---
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
@@ -88,4 +77,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-07-27 16:20:02
+-- Dump completed on 2021-08-21 13:52:32
