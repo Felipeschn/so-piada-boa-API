@@ -16,5 +16,7 @@ const routes = require("./src/routes");
 app.use("/v1", routes);
 
 app.listen(process.env.PORT, () =>
-  console.log("Success! - Server is running on port" + process.env.PORT)
+  console.log("Success! - Server is running on port " + process.env.PORT)
 );
+
+module.exports = app;
