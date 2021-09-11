@@ -1,7 +1,6 @@
 # Triider Test
 
 This repository aims to bring informations and guide how to execute the project.
-Vídeo apresentação do projeto: https://youtu.be/mW-rGnXYknY
 
 #Requirements:
 
