@@ -1,4 +1,4 @@
-# Triider Test
+# So Piada Boa
 
 This repository aims to bring informations and guide how to execute the project.
 
@@ -21,8 +21,8 @@ contact: felipe.lazzid@gmail.com
 
 ---
 
-arquivo `.env`:
-
+- Local envirement - 
+`.env`:
 PORT=3001
 
 DB_HOST=localhost
